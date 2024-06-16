@@ -1,8 +1,8 @@
 # Dockerized FastAPI Postgress Starter (w/ CI/CD)
 ---
-## Docker
-### `Dockerfile.dev`
-### `docker-compose.yml`
+## Overview
+- This repo is a simple FastAPI layer with api routing, user creation & auth connected to a postgress database.
 
-## CI/CD
-### `deploy.yml`
+## Next steps
+- Add Testing
+- Update github actions / workflow

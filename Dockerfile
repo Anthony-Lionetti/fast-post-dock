@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Copy requirements set working dir
 COPY ./requirements.txt ./tmp/requirements.txt
-COPY ./app /app
+COPY . /app/backend
 WORKDIR /app
 
 # Expose port 8000 in the docker container
@@ -25,8 +25,9 @@ RUN python -m venv /py && \
     # CLEAN UP INSTALLS
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
+    # add new user for security purposes 
     adduser \
-        --disable-password \ 
+        --disabled-password \ 
         --no-create-home \
         api-user
 
